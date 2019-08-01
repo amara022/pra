@@ -68,6 +68,7 @@ public:
 			val += GetDayOfMonth(a->_month);
 		}
 		val += a->_day;
+		return val;
 	}
 	int GetDiff(Date* a, Date* b)
 	{
@@ -119,6 +120,7 @@ void test()
 {
 	Date a(2019, 7, 33);
 	Date b(2019,12,15);
+
 //	++a;
 //	a++;
 	cout << b << endl;

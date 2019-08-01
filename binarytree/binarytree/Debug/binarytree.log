@@ -1,0 +1,115 @@
+﻿生成启动时间为 2019/8/1 14:18:33。
+     1>项目“D:\代码\作业\pra\binarytree\binarytree\binarytree.vcxproj”在节点 2 上(Build 个目标)。
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TC /analyze- /errorReport:prompt main.c
+         main.c
+     1>d:\代码\作业\pra\binarytree\binarytree\binarytree.h(10): error C2061: 语法错误: 标识符“isSameTree”
+     1>d:\代码\作业\pra\binarytree\binarytree\binarytree.h(10): error C2059: 语法错误:“;”
+     1>d:\代码\作业\pra\binarytree\binarytree\binarytree.h(10): error C2059: 语法错误:“类型”
+     1>c:\program files (x86)\microsoft visual studio 12.0\vc\include\cstdlib(18): error C2054: 在“using”之后应输入“(”
+     1>c:\program files (x86)\microsoft visual studio 12.0\vc\include\cstdlib(18): error C2061: 语法错误: 标识符“using”
+     1>c:\program files (x86)\microsoft visual studio 12.0\vc\include\cstdlib(19): error C2061: 语法错误: 标识符“using”
+     1>c:\program files (x86)\microsoft visual studio 12.0\vc\include\cstdlib(19): error C2061: 语法错误: 标识符“abs”
+     1>c:\program files (x86)\microsoft visual studio 12.0\vc\include\cstdlib(19): error C2059: 语法错误:“;”
+     1>c:\program files (x86)\microsoft visual studio 12.0\vc\include\cstdlib(19): error C2061: 语法错误: 标识符“atexit”
+     1>c:\program files (x86)\microsoft visual studio 12.0\vc\include\cstdlib(20): error C2061: 语法错误: 标识符“atof”
+     1>c:\program files (x86)\microsoft visual studio 12.0\vc\include\cstdlib(20): error C2059: 语法错误:“;”
+     1>c:\program files (x86)\microsoft visual studio 12.0\vc\include\cstdlib(20): error C2061: 语法错误: 标识符“atoi”
+     1>c:\program files (x86)\microsoft visual studio 12.0\vc\include\cstdlib(20): error C2061: 语法错误: 标识符“atol”
+     1>c:\program files (x86)\microsoft visual studio 12.0\vc\include\cstdlib(21): error C2061: 语法错误: 标识符“bsearch”
+     1>c:\program files (x86)\microsoft visual studio 12.0\vc\include\cstdlib(21): error C2059: 语法错误:“;”
+     1>c:\program files (x86)\microsoft visual studio 12.0\vc\include\cstdlib(21): error C2061: 语法错误: 标识符“calloc”
+     1>c:\program files (x86)\microsoft visual studio 12.0\vc\include\cstdlib(21): error C2061: 语法错误: 标识符“div”
+     1>c:\program files (x86)\microsoft visual studio 12.0\vc\include\cstdlib(22): error C2061: 语法错误: 标识符“exit”
+     1>c:\program files (x86)\microsoft visual studio 12.0\vc\include\cstdlib(22): error C2059: 语法错误:“;”
+     1>c:\program files (x86)\microsoft visual studio 12.0\vc\include\cstdlib(22): error C2061: 语法错误: 标识符“free”
+     1>c:\program files (x86)\microsoft visual studio 12.0\vc\include\cstdlib(23): error C2061: 语法错误: 标识符“labs”
+     1>c:\program files (x86)\microsoft visual studio 12.0\vc\include\cstdlib(23): error C2059: 语法错误:“;”
+     1>c:\program files (x86)\microsoft visual studio 12.0\vc\include\cstdlib(23): error C2061: 语法错误: 标识符“ldiv”
+     1>c:\program files (x86)\microsoft visual studio 12.0\vc\include\cstdlib(23): error C2061: 语法错误: 标识符“malloc”
+     1>c:\program files (x86)\microsoft visual studio 12.0\vc\include\cstdlib(24): error C2061: 语法错误: 标识符“mblen”
+     1>c:\program files (x86)\microsoft visual studio 12.0\vc\include\cstdlib(24): error C2059: 语法错误:“;”
+     1>c:\program files (x86)\microsoft visual studio 12.0\vc\include\cstdlib(24): error C2061: 语法错误: 标识符“mbstowcs”
+     1>c:\program files (x86)\microsoft visual studio 12.0\vc\include\cstdlib(24): error C2061: 语法错误: 标识符“mbtowc”
+     1>c:\program files (x86)\microsoft visual studio 12.0\vc\include\cstdlib(25): error C2061: 语法错误: 标识符“qsort”
+     1>c:\program files (x86)\microsoft visual studio 12.0\vc\include\cstdlib(25): error C2059: 语法错误:“;”
+     1>c:\program files (x86)\microsoft visual studio 12.0\vc\include\cstdlib(25): error C2061: 语法错误: 标识符“rand”
+     1>c:\program files (x86)\microsoft visual studio 12.0\vc\include\cstdlib(25): error C2061: 语法错误: 标识符“realloc”
+     1>c:\program files (x86)\microsoft visual studio 12.0\vc\include\cstdlib(26): error C2061: 语法错误: 标识符“srand”
+     1>c:\program files (x86)\microsoft visual studio 12.0\vc\include\cstdlib(26): error C2059: 语法错误:“;”
+     1>c:\program files (x86)\microsoft visual studio 12.0\vc\include\cstdlib(26): error C2061: 语法错误: 标识符“strtod”
+     1>c:\program files (x86)\microsoft visual studio 12.0\vc\include\cstdlib(26): error C2061: 语法错误: 标识符“strtol”
+     1>c:\program files (x86)\microsoft visual studio 12.0\vc\include\cstdlib(27): error C2061: 语法错误: 标识符“strtoul”
+     1>c:\program files (x86)\microsoft visual studio 12.0\vc\include\cstdlib(27): error C2059: 语法错误:“;”
+     1>c:\program files (x86)\microsoft visual studio 12.0\vc\include\cstdlib(28): error C2061: 语法错误: 标识符“wcstombs”
+     1>c:\program files (x86)\microsoft visual studio 12.0\vc\include\cstdlib(28): error C2059: 语法错误:“;”
+     1>c:\program files (x86)\microsoft visual studio 12.0\vc\include\cstdlib(28): error C2061: 语法错误: 标识符“wctomb”
+     1>c:\program files (x86)\microsoft visual studio 12.0\vc\include\cstdlib(30): error C2054: 在“using”之后应输入“(”
+     1>c:\program files (x86)\microsoft visual studio 12.0\vc\include\cstdlib(33): error C2061: 语法错误: 标识符“using”
+     1>c:\program files (x86)\microsoft visual studio 12.0\vc\include\cstdlib(34): error C2061: 语法错误: 标识符“system”
+     1>c:\program files (x86)\microsoft visual studio 12.0\vc\include\cstdlib(34): error C2059: 语法错误:“;”
+     1>c:\program files (x86)\microsoft visual studio 12.0\vc\include\cstdlib(37): error C2061: 语法错误: 标识符“atoll”
+     1>c:\program files (x86)\microsoft visual studio 12.0\vc\include\cstdlib(37): error C2059: 语法错误:“;”
+     1>c:\program files (x86)\microsoft visual studio 12.0\vc\include\cstdlib(37): error C2061: 语法错误: 标识符“llabs”
+     1>c:\program files (x86)\microsoft visual studio 12.0\vc\include\cstdlib(37): error C2061: 语法错误: 标识符“lldiv”
+     1>c:\program files (x86)\microsoft visual studio 12.0\vc\include\cstdlib(38): error C2061: 语法错误: 标识符“strtof”
+     1>c:\program files (x86)\microsoft visual studio 12.0\vc\include\cstdlib(38): error C2059: 语法错误:“;”
+     1>c:\program files (x86)\microsoft visual studio 12.0\vc\include\cstdlib(38): error C2061: 语法错误: 标识符“strtold”
+     1>c:\program files (x86)\microsoft visual studio 12.0\vc\include\cstdlib(39): error C2061: 语法错误: 标识符“strtoll”
+     1>c:\program files (x86)\microsoft visual studio 12.0\vc\include\cstdlib(39): error C2059: 语法错误:“;”
+     1>c:\program files (x86)\microsoft visual studio 12.0\vc\include\cstdlib(39): error C2061: 语法错误: 标识符“strtoull”
+     1>c:\program files (x86)\microsoft visual studio 12.0\vc\include\xtgmath.h(214): warning C4602: #pragma pop_macro:“new”该标识符前面没有 #pragma push_macro
+     1>c:\program files (x86)\microsoft visual studio 12.0\vc\include\xtgmath.h(215): warning C4193: #pragma warning(pop) : 没有匹配的“#pragma warning(push)”
+     1>c:\program files (x86)\microsoft visual studio 12.0\vc\include\xtgmath.h(216): warning C4161: #pragma pack(pop...) : 出栈的比入栈的多
+     1>c:\program files (x86)\microsoft visual studio 12.0\vc\include\cmath(23): error C2061: 语法错误: 标识符“abs”
+     1>c:\program files (x86)\microsoft visual studio 12.0\vc\include\cmath(23): error C2059: 语法错误:“;”
+     1>c:\program files (x86)\microsoft visual studio 12.0\vc\include\cmath(23): error C2061: 语法错误: 标识符“acos”
+     1>c:\program files (x86)\microsoft visual studio 12.0\vc\include\cmath(23): error C2061: 语法错误: 标识符“asin”
+     1>c:\program files (x86)\microsoft visual studio 12.0\vc\include\cmath(24): error C2061: 语法错误: 标识符“atan”
+     1>c:\program files (x86)\microsoft visual studio 12.0\vc\include\cmath(24): error C2059: 语法错误:“;”
+     1>c:\program files (x86)\microsoft visual studio 12.0\vc\include\cmath(24): error C2061: 语法错误: 标识符“atan2”
+     1>c:\program files (x86)\microsoft visual studio 12.0\vc\include\cmath(24): error C2061: 语法错误: 标识符“ceil”
+     1>c:\program files (x86)\microsoft visual studio 12.0\vc\include\cmath(25): error C2061: 语法错误: 标识符“cos”
+     1>c:\program files (x86)\microsoft visual studio 12.0\vc\include\cmath(25): error C2059: 语法错误:“;”
+     1>c:\program files (x86)\microsoft visual studio 12.0\vc\include\cmath(25): error C2061: 语法错误: 标识符“cosh”
+     1>c:\program files (x86)\microsoft visual studio 12.0\vc\include\cmath(25): error C2061: 语法错误: 标识符“exp”
+     1>c:\program files (x86)\microsoft visual studio 12.0\vc\include\cmath(26): error C2061: 语法错误: 标识符“fabs”
+     1>c:\program files (x86)\microsoft visual studio 12.0\vc\include\cmath(26): error C2059: 语法错误:“;”
+     1>c:\program files (x86)\microsoft visual studio 12.0\vc\include\cmath(26): error C2061: 语法错误: 标识符“floor”
+     1>c:\program files (x86)\microsoft visual studio 12.0\vc\include\cmath(26): error C2061: 语法错误: 标识符“fmod”
+     1>c:\program files (x86)\microsoft visual studio 12.0\vc\include\cmath(27): error C2061: 语法错误: 标识符“frexp”
+     1>c:\program files (x86)\microsoft visual studio 12.0\vc\include\cmath(27): error C2059: 语法错误:“;”
+     1>c:\program files (x86)\microsoft visual studio 12.0\vc\include\cmath(27): error C2061: 语法错误: 标识符“ldexp”
+     1>c:\program files (x86)\microsoft visual studio 12.0\vc\include\cmath(27): error C2061: 语法错误: 标识符“log”
+     1>c:\program files (x86)\microsoft visual studio 12.0\vc\include\cmath(28): error C2061: 语法错误: 标识符“log10”
+     1>c:\program files (x86)\microsoft visual studio 12.0\vc\include\cmath(28): error C2059: 语法错误:“;”
+     1>c:\program files (x86)\microsoft visual studio 12.0\vc\include\cmath(28): error C2061: 语法错误: 标识符“modf”
+     1>c:\program files (x86)\microsoft visual studio 12.0\vc\include\cmath(28): error C2061: 语法错误: 标识符“pow”
+     1>c:\program files (x86)\microsoft visual studio 12.0\vc\include\cmath(29): error C2061: 语法错误: 标识符“sin”
+     1>c:\program files (x86)\microsoft visual studio 12.0\vc\include\cmath(29): error C2059: 语法错误:“;”
+     1>c:\program files (x86)\microsoft visual studio 12.0\vc\include\cmath(29): error C2061: 语法错误: 标识符“sinh”
+     1>c:\program files (x86)\microsoft visual studio 12.0\vc\include\cmath(29): error C2061: 语法错误: 标识符“sqrt”
+     1>c:\program files (x86)\microsoft visual studio 12.0\vc\include\cmath(30): error C2061: 语法错误: 标识符“tan”
+     1>c:\program files (x86)\microsoft visual studio 12.0\vc\include\cmath(30): error C2059: 语法错误:“;”
+     1>c:\program files (x86)\microsoft visual studio 12.0\vc\include\cmath(30): error C2061: 语法错误: 标识符“tanh”
+     1>c:\program files (x86)\microsoft visual studio 12.0\vc\include\cmath(32): error C2061: 语法错误: 标识符“acosf”
+     1>c:\program files (x86)\microsoft visual studio 12.0\vc\include\cmath(32): error C2059: 语法错误:“;”
+     1>c:\program files (x86)\microsoft visual studio 12.0\vc\include\cmath(32): error C2061: 语法错误: 标识符“asinf”
+     1>c:\program files (x86)\microsoft visual studio 12.0\vc\include\cmath(33): error C2061: 语法错误: 标识符“atanf”
+     1>c:\program files (x86)\microsoft visual studio 12.0\vc\include\cmath(33): error C2059: 语法错误:“;”
+     1>c:\program files (x86)\microsoft visual studio 12.0\vc\include\cmath(33): error C2061: 语法错误: 标识符“atan2f”
+     1>c:\program files (x86)\microsoft visual studio 12.0\vc\include\cmath(33): error C2061: 语法错误: 标识符“ceilf”
+     1>c:\program files (x86)\microsoft visual studio 12.0\vc\include\cmath(34): error C2061: 语法错误: 标识符“cosf”
+     1>c:\program files (x86)\microsoft visual studio 12.0\vc\include\cmath(34): error C2059: 语法错误:“;”
+     1>c:\program files (x86)\microsoft visual studio 12.0\vc\include\cmath(34): error C2061: 语法错误: 标识符“coshf”
+     1>c:\program files (x86)\microsoft visual studio 12.0\vc\include\cmath(34): error C2061: 语法错误: 标识符“expf”
+     1>c:\program files (x86)\microsoft visual studio 12.0\vc\include\cmath(35): error C2061: 语法错误: 标识符“fabsf”
+     1>c:\program files (x86)\microsoft visual studio 12.0\vc\include\cmath(35): error C2059: 语法错误:“;”
+     1>c:\program files (x86)\microsoft visual studio 12.0\vc\include\cmath(35): error C2061: 语法错误: 标识符“floorf”
+     1>c:\program files (x86)\microsoft visual studio 12.0\vc\include\cmath(35): error C2061: 语法错误: 标识符“fmodf”
+     1>c:\program files (x86)\microsoft visual studio 12.0\vc\include\cmath(35): fatal error C1003: 错误计数超过 100；正在停止编译
+     1>已完成生成项目“D:\代码\作业\pra\binarytree\binarytree\binarytree.vcxproj”(Build 个目标)的操作 - 失败。
+
+生成失败。
+
+已用时间 00:00:00.25

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>学生管理系统(web版)首页</title>
+</head>
+<script>
+    {#    确认删除框#}
+    function del(stu_sid) {
+        var i = confirm("确认删除吗？")
+        if (i == true) {
+            location.href = "deleteStudent?delete_sid=" + stu_sid;
+        }
+    }
+
+</script>
+<body>
+{#网页的标题#}
+<div align="center">
+    <h1>版学生管理系统<font size="2"></font></h1>
+    <p></p>
+    {#模糊查询的表单#}
+    <form action="findStudent" method="post">
+        {#表单提交都要添加防御机制#}
+        {% csrf_token %}
+        <input type="text" name="str" placeholder="此处填写姓名或性别"><input type="submit" value="搜索">&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<a
+            href="add.html">添加学生</a>
+    </form>
+    <p></p>
+    <table border="1">
+        <thead>
+        <th>学生编号</th>
+        <th>学生姓名</th>
+        <th>学生性别</th>
+        <th>学生年龄</th>
+        <th>学生年级</th>
+        <th>学生成绩</th>
+        <th>操作</th>
+        </thead>
+        <tbody>
+        {#将views.py返回的学生集合数据context中的键students通过for循环遍历#}
+        {% for student in students %}
+            <tr>
+                <td>{{ student.sid }}</td>
+                <td>{{ student.sname }}</td>
+                <td>{{ student.ssex }}</td>
+                <td>{{ student.sage }}</td>
+                <td>{{ student.sgrade }}</td>
+                <td>{{ student.sscore }}</td>
+                <td><a href="updateStudent?update_sid={{ student.sid }}">修改</a>|<a
+                        href="javascript:del({{ student.sid }})">删除</a></td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+    <div style="margin-right:15px">共{{ count }}条记录</div>
+</div>
+
+</body>
+</html>

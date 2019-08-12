@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>修改学生</title>
+</head>
+<body>
+<div align="center">
+    <h3>修改学生</h3>
+    <form action="updateStudent" method="post">
+        {#在 templete 中, 为每个 POST form 增加一个 {% csrf_token %} tag,这是Django的防御机制#}
+        {% csrf_token %}
+        <input type="hidden" value="{{ student.sid }}" name="sid">
+        学生姓名：<input type="text" value="{{ student.sname }}" name="sname"><br>
+        学生性别：<input type="text" value="{{ student.ssex }}" name="ssex"><br>
+        学生年龄：<input type="text" value="{{ student.sage }}" name="sage"><br>
+        学生年级：<input type="text" value="{{ student.sgrade }}" name="sgrade"><br>
+        学生成绩：<input type="text" value="{{ student.sscore }}" name="sscore"><br>
+        <input type="submit" value="修改">
+    </form>
+</div>
+</body>
+</html>

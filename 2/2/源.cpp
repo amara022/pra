@@ -1,4 +1,5 @@
-﻿#define _CRT_SECURE_NO_WARNINGS 1
+﻿
+#define _CRT_SECURE_NO_WARNINGS 1
 #include <stdio.h>
 #include <stdlib.h>
 #include <malloc.h>
@@ -78,7 +79,6 @@ while (1)
 	if (input<0 && i == 0)
 	{
 		head->data = 0;
-		
 		ListInsert(head, i, input);
 	}
 	else if (input >= 0 && i == 0)
@@ -126,7 +126,7 @@ while (r != head)
 {
 	if (r->data<10)
 	{
-		printf(",000");
+		printf("");
 		printf("%d", r->data);
 	}
 	else if (r->data<100)
@@ -220,7 +220,7 @@ void minus(DLNode *head1, DLNode *head2, DLNode *head3)
 				e = 10000 + p1->data - p2->data;
 				ListInsert(head3, 0, e);
 				p1 = p1->prior; p2 = p2->prior;
-				z = -1;
+				z = 1;
 			}
 		}
 		p1->data = p1->data + z;
@@ -260,7 +260,7 @@ void minus(DLNode *head1, DLNode *head2, DLNode *head3)
 			ListInsert(head3, 0, e);
 			p1 = p1->prior;
 		}
-		head3->next->data = -1 * head3->next->data;
+		head3->next->data = 1 * head3->next->data;
 	}
 	else
 	{
@@ -273,8 +273,9 @@ int InsertNode(DLNode *head, int n, int x) //向链表第N个位置插入元素X
 	DLNode *p, *nt;
 	int i = 0;
 	p = head->next;
-	while (p != head&&i<n)
+	while (p != head&&i < n)
 	{
+		if (p->data != '-')
 		p = p->next; i++;
 	}
 	if (i != n)
@@ -296,7 +297,8 @@ DLNode* add(DLNode *head1, DLNode *head2){
 	while (p1 != head1&&p2 != head2) //每个链表元素相加
 	{
 		p1->data += p2->data;
-		p1 = p1->prior; p2 = p2->prior;
+		p1 = p1->prior; 
+		p2 = p2->prior;
 	}
 	p1 = head1->prior;
 	while (p1 != head1->next) //处理链表元素
@@ -305,7 +307,8 @@ DLNode* add(DLNode *head1, DLNode *head2){
 		{
 			p1->prior->data += p1->data / 10000;
 			p1->data %= 10000;
-		} if (p1->data<0) //处理负数
+		} 
+		if (p1->data<0) //处理负数
 		{
 			if (head1->next->data != 0)
 			{
@@ -320,8 +323,8 @@ DLNode* add(DLNode *head1, DLNode *head2){
 		head1->next->next->data %= 10000;
 	}
 	if (head1->data <= -10000)
-	{
-		InsertNode(head1, 0, head1->next->data / 10000);
+	{	
+		InsertNode(head1, 0, head1->next->data / -10000);
 		head1->next->next->data %= -10000;
 	}
 	return head1;
@@ -351,16 +354,17 @@ DLNode* jian(DLNode *h1, DLNode *h2) //两数相减
 				p1->prior->data -= 1;
 				p1->data += 10000;
 			}
-		} p1 = p1->prior;
+		} 
+		p1 = p1->prior;
 	}
 	if (h1->next->data >= 10000) //处理最前面的数
 	{
-		InsertNode(h1, 0, h1->next->data / 10000);
+		InsertNode(h1, 0, h1->next->data / -10000);
 		h1->next->next->data %= 10000;
 	}
 	if (h1->data <= -10000)
 	{
-		InsertNode(h1, 0, h1->next->data / -10000);
+		InsertNode(h1, 0, h1->next->data / 10000);
 		h1->next->next->data %= -10000;
 	}
 	return h1;
@@ -371,15 +375,16 @@ int main()
 	char ch, ch1;
 	while (1)
 	{
-		//int w=-1;
 		DLNode *a, *b, *c;
 		ListInitiate(&a);
 		ListInitiate(&b);
 		ListInitiate(&c);
 		printf("请输入数A(以分号结束):");
 		InputNumber(a);
+
 		printf("\n");
 		printf("请输入数B(以分号结束):");
+		
 		InputNumber(b);
 		printf("请选择操作符:<+,->:\n");
 		scanf("%s", &ch1);

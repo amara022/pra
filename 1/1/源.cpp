@@ -137,7 +137,6 @@ void InsertSort(Node *head)
 	}
 }
 
-//测试
 
 #include"Node.h"
 

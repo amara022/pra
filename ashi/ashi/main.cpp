@@ -147,7 +147,8 @@ int main()
 {
 	string str;
 	stack<int> s;
-	//    cin>>str;
+
+	   // cin>>str;
 	str = "ab*(a*|(ab)*|b)*b";
 
 	MyClass myclass(str);

@@ -48,7 +48,7 @@ int ListInsert(DLNode *head, int i, int x)
 	}
 	if (j != i)
 	{
-		printf("\n插入位置不合法～");
+		printf("\n插入位置不合法");
 		return 0;
 	}
 	if ((s = (DLNode *)malloc(sizeof(DLNode))) == NULL) exit(0);
@@ -61,13 +61,6 @@ int ListInsert(DLNode *head, int i, int x)
 }
 
 
-int abs(int x)
-{
-	if (x<0) 
-		return -x;
-	else 
-		return x;
-}
 //读入输入的数据 
 int InputNumber(DLNode *head) 
 {
@@ -148,150 +141,6 @@ while (r != head)
 printf("\n");
 }
 
-int change(DLNode *head1, DLNode *head2)
-{
-	int length1, length2, r = 2;
-	length1 = ListLength(head1);
-	length2 = ListLength(head2);
-	DLNode *p1, *p2;
-	p1 = head1->next;
-	p2 = head2->next;
-	if (length1>length2)
-	{
-		r = 0;
-		return r;
-	}
-	else if (length1<length2)
-	{
-		r = 1;
-		return r;
-	}
-	else
-	{
-		int i = 0;
-		for (i = 0; i<length1; i++)
-		{
-			if (p1->data>p2->data)
-			{
-				r = 0;
-				return r;
-				break;
-			}
-			else if (p2->data>p1->data)
-			{
-				r = 1;
-				return r;
-				break;
-			}
-			else
-			{
-				p1 = p1->next;
-				p2 = p2->next;
-				r = 2;
-			}
-		}
-	}
-	return r;
-}
-
-//实现减法
-void minus(DLNode *head1, DLNode *head2, DLNode *head3)
-{
-	int z = 0, x = -1;
-	int e;
-	DLNode *p1, *p2;
-	p1 = head1->prior;
-	p2 = head2->prior;
-	x = change(head1, head2);
-	if (x == 0)
-	{
-		while (p1 != head1&&p2 != head2)
-		{
-			p1->data = p1->data + z;
-			if (p1->data >= p2->data)
-			{
-				e = p1->data - p2->data;
-				ListInsert(head3, 0, e);
-				p1 = p1->prior; p2 = p2->prior;
-				z = 0;
-			}
-			else
-			{
-				e = 10000 + p1->data - p2->data;
-				ListInsert(head3, 0, e);
-				p1 = p1->prior; p2 = p2->prior;
-				z = 1;
-			}
-		}
-		p1->data = p1->data + z;
-		while (p1 != head1)
-		{
-			e = p1->data;
-			ListInsert(head3, 0, e);
-			p1 = p1->prior;
-		}
-	}
-	else if (x == 1)
-	{
-		p2 = head1->prior;
-		p1 = head2->prior;
-		while (p1 != head2&&p2 != head1)
-		{
-			p1->data = p1->data + z;
-			if (p1->data >= p2->data)
-			{
-				e = p1->data - p2->data;
-				ListInsert(head3, 0, e);
-				p1 = p1->prior; p2 = p2->prior;
-				z = 0;
-			}
-			else
-			{
-				e = 10000 + p1->data - p2->data;
-				ListInsert(head3, 0, e);
-				p1 = p1->prior; p2 = p2->prior;
-				z = -1;
-			}
-		}
-		p1->data = p1->data + z;
-		while (p1 != head2)
-		{
-			e = p1->data;
-			ListInsert(head3, 0, e);
-			p1 = p1->prior;
-		}
-		head3->next->data = 1 * head3->next->data;
-	}
-	else
-	{
-		head3->next->data = 0;
-	}
-}
-
-int InsertNode(DLNode *head, int n, int x) //向链表第N个位置插入元素X
-{
-	DLNode *p, *nt;
-	int i = 0;
-	p = head->next;
-	while (p != head&&i < n)
-	{
-		if (p->data != '-')
-		p = p->next; i++;
-	}
-	if (i != n)
-	{
-		printf("插入位置错误\n");
-		return 0;
-	}
-	if ((nt = (DLNode *)malloc(sizeof(DLNode))) == NULL)
-		exit(1);
-	nt->data = x;
-	nt->prior = p->prior;
-	nt->prior->next = nt;
-	nt->next = p;
-	p->prior = nt;
-	return 1;
-}
 DLNode* add(DLNode *head1, DLNode *head2){
 	DLNode *p1 = head1->prior, *p2 = head2->prior;
 	while (p1 != head1&&p2 != head2) //每个链表元素相加
@@ -319,16 +168,17 @@ DLNode* add(DLNode *head1, DLNode *head2){
 	}
 	if (head1->next->data >= 10000) //处理最前面的数
 	{
-		InsertNode(head1, 0, head1->next->data / 10000);
+		ListInsert(head1, 0, head1->next->data / 10000);
 		head1->next->next->data %= 10000;
 	}
 	if (head1->data <= -10000)
 	{	
-		InsertNode(head1, 0, head1->next->data / -10000);
+		ListInsert(head1, 0, head1->next->data / -10000);
 		head1->next->next->data %= -10000;
 	}
 	return head1;
 }
+
 DLNode* jian(DLNode *h1, DLNode *h2) //两数相减
 {
 	DLNode *p1 = h1->prior, *p2 = h2->prior;
@@ -359,12 +209,12 @@ DLNode* jian(DLNode *h1, DLNode *h2) //两数相减
 	}
 	if (h1->next->data >= 10000) //处理最前面的数
 	{
-		InsertNode(h1, 0, h1->next->data / -10000);
+		ListInsert(h1, 0, h1->next->data / -10000);
 		h1->next->next->data %= 10000;
 	}
 	if (h1->data <= -10000)
 	{
-		InsertNode(h1, 0, h1->next->data / 10000);
+		ListInsert(h1, 0, h1->next->data / 10000);
 		h1->next->next->data %= -10000;
 	}
 	return h1;

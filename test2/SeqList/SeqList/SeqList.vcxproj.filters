@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="3.cpp">
+    <ClCompile Include="Sedlist.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>

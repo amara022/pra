@@ -1,5 +1,4 @@
 #define _CRT_SECURE_NO_WARNINGS 1
-
 #include<iostream>
 #include<deque>
 #include<map>
@@ -7,22 +6,19 @@
 #include<stack>
 #include<vector>
 using namespace std;
-
-
 class StateTransitionDiagram
 {
 public:
-	StateTransitionDiagram();//constructor
-	StateTransitionDiagram(int s);//constructor with a initial value
-	int getNode();//get the value of the node
-	multimap<char, int> getTransitionMatrix();//get the transition matrix
-	void addTransition(char val, int n);//add transition to the current node
-	void print();//print the graph
+	StateTransitionDiagram();//构造函数
+	StateTransitionDiagram(int s);//构造函数（含初始值）
+	int getNode();//结点的值
+	multimap<char, int> getTransitionMatrix();//获取交换函数
+	void addTransition(char val, int n);//向当前节点添加过渡函数
+	void print();//打印图
 private:
-	int node; //the number of the node
-	multimap<char, int>transitionMatrix;//record the state transition
+	int node; 
+	multimap<char, int> transitionMatrix;
 };
-
 
 StateTransitionDiagram::StateTransitionDiagram()
 {
@@ -57,17 +53,17 @@ void StateTransitionDiagram::print()
 
 
 #define EPSILON '#'
-typedef deque<StateTransitionDiagram*>NFA; //define NFA with a deque,and the type of the element in the deque id StateTransitionDiagram
-typedef deque<StateTransitionDiagram*>DFA;//same with NFA
+typedef deque<StateTransitionDiagram*>NFA; //定义NFA以及属性状态转移图中元素的类型
+typedef deque<StateTransitionDiagram*>DFA;
 typedef set<int>::iterator set_it;
 typedef multimap<char, int>::iterator multimap_it;
-void NFAtoDFA();                                         //determine the NFA with subset method
-set<int> epsilonClosure(set<int> &s);             //epsilon closure
-multimap<char, int> getTranMatrix(int n);        //get the transition matrix of the node n
-set<int>getSet(set<int>&, char);                      //get set when input a char
-bool getUnhandled(multimap<set<int>, int>::iterator &it);  //judge whether the node is handled
-map<set<int>, int>dfaTran;                             //transition in the dfa
-set<char> inputChar;                                       //input char
+void NFAtoDFA();                                         //子集法确定NFA
+set<int> epsilonClosure(set<int> &s);             //e-closure
+multimap<char, int> getTranMatrix(int n);        //获取节点的转移矩阵
+set<int>getSet(set<int>&, char);                      //根据输入字符创建
+bool getUnhandled(multimap<set<int>, int>::iterator &it);  //判断节点是否被处理
+map<set<int>, int>dfaTran;                             //dfa的转换函数
+set<char> inputChar;                                       //输入字符
 vector<int>dfaT;
 vector<int>nfaT;
 

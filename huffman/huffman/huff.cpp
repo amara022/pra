@@ -121,7 +121,7 @@ void HuffManCoding(struct BTreeNode* FBT, int len)//len初始值为0
 }
 
 //主函数
-void main()
+int main()
 {
 	int n, i;
 	ElemType* a;
@@ -147,4 +147,5 @@ void main()
 	printf("%d\n", WeightPathLength(fbt, 0));
 	printf("树中每个叶子结点的哈夫曼编码：\n");
 	HuffManCoding(fbt, 0);
+	return 0;
 }
